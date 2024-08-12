@@ -11,6 +11,7 @@ import ToolsIcon from '../utils/icons/TooltsIcon';
 import BoxIcon from '../utils/icons/BoxIcon';
 import VehicleIcon from '../utils/icons/VehicleIcon';
 import GroundIcon from '../utils/icons/GroundIcon';
+import { maincolor } from '../../store/maincolor';
 
 
 const PAGE_SIZE = 30;

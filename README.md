@@ -1,3 +1,9 @@
+# mri Redesign
+### Added new feature to change background color
+
+Set on your ox.cfg:
+```setr inventory:color "#51cf6680" # Change to any color (hex, rgba, etc.)```
+
 # ox_inventory
 
 A complete inventory system for FiveM, implementing items, weapons, shops, and more without any strict framework dependency.

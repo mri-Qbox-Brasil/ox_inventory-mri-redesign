@@ -7,9 +7,10 @@ import { useAppSelector } from '../../store';
 import { selectLeftInventory } from '../../store/inventory';
 import { SlotWithItem } from '../../typings';
 import SlideUp from '../utils/transitions/SlideUp';
+import { maincolor } from '../../store/maincolor';
 
 const InventoryHotbar: React.FC = () => {
-  const [hotbarVisible, setHotbarVisible] = useState(false);
+  const [hotbarVisible, setHotbarVisible] = useState(true);
   const items = useAppSelector(selectLeftInventory).items.slice(0, 5);
 
   //stupid fix for timeout
@@ -40,10 +41,17 @@ const InventoryHotbar: React.FC = () => {
                 <div className="hotbar-slot-number">{item.slot}</div>
                 <div className="hotbar-slot-header-wrapper">
                   <div className="inventory-slot-number"></div>
-                  
+
                   {item.count && (
-                    <div className={`inventory-weight ${item.name == 'money' ? 'inventory-weight--money' : 'inventory-weight--amount'}`}>
-                      {item.count.toLocaleString('en-us') + ` ${item.name == 'money' ? '$' : 'x'}`}
+                    <div
+                      style={{
+                        backgroundColor: maincolor,
+                      }}
+                      className={`inventory-weight ${
+                        item.name == 'money' ? 'inventory-weight--money' : 'inventory-weight--amount'
+                      }`}
+                    >
+                      {item.count.toLocaleString('en-us') + ` ${item.name == 'money' ? 'R$' : 'x'}`}
                     </div>
                   )}
                 </div>
