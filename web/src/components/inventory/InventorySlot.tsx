@@ -136,6 +136,11 @@ const InventorySlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotProps> =
         border: isOver ? `1px solid ${maincolor}` : '',
       }}
     >
+    
+    {!isSlotWithItem(item) && item.slot <= 5 && inventoryType == 'player' && (
+      <div className="hotbar-slot-number">{item.slot}</div>
+    )}
+
       {isSlotWithItem(item) && (
         <div
           className="item-slot-wrapper"

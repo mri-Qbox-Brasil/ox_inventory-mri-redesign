@@ -10,7 +10,7 @@ import SlideUp from '../utils/transitions/SlideUp';
 import { maincolor } from '../../store/maincolor';
 
 const InventoryHotbar: React.FC = () => {
-  const [hotbarVisible, setHotbarVisible] = useState(true);
+  const [hotbarVisible, setHotbarVisible] = useState(false);
   const items = useAppSelector(selectLeftInventory).items.slice(0, 5);
 
   //stupid fix for timeout
@@ -29,6 +29,7 @@ const InventoryHotbar: React.FC = () => {
     <SlideUp in={hotbarVisible}>
       <div className="hotbar-container">
         {items.map((item) => (
+          
           <div
             className="hotbar-item-slot"
             style={{
@@ -36,9 +37,13 @@ const InventoryHotbar: React.FC = () => {
             }}
             key={`hotbar-${item.slot}`}
           >
+          
+          {!isSlotWithItem(item) && (
+            <div className="hotbar-slot-number">{item.slot}</div>
+          )}
+
             {isSlotWithItem(item) && (
               <div className="item-slot-wrapper">
-                <div className="hotbar-slot-number">{item.slot}</div>
                 <div className="hotbar-slot-header-wrapper">
                   <div className="inventory-slot-number"></div>
 
