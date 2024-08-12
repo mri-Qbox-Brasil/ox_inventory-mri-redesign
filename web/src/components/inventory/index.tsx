@@ -2,8 +2,6 @@ import React from 'react';
 import useNuiEvent from '../../hooks/useNuiEvent';
 import InventoryControl from './InventoryControl';
 import InventoryHotbar from './InventoryHotbar';
-import { maincolor } from '../../store/maincolor';
-
 import { useAppDispatch } from '../../store';
 import { refreshSlots, setAdditionalMetadata, setupInventory } from '../../store/inventory';
 import { useExitListener } from '../../hooks/useExitListener';
@@ -46,8 +44,7 @@ const Inventory: React.FC = () => {
     <>
       <Fade in={inventoryVisible}>
         <div className="h-full">
-          <div className={`absolute h-screen w-full top-0 left-0 bg-gradient-to-l from-${maincolor} to-black/30`} />
-
+          <div className="inventory-background" />
           <div className="inventory-wrapper relative">
             <LeftInventory />
             <InventoryControl />

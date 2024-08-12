@@ -40,7 +40,7 @@ const InventoryControl: React.FC = () => {
       <div className="inventory-control flex items-start justify-center px-3">
         <div className="grid grid-cols-1 gap-2.5">
           <input
-            className="w-28 2k:w-32 4k:w-40 px-1 py-2.5 2k:py-4 4k:py-6 2k:text-xl 4k:text-3xl bg-dark bg-opacity-40 rounded-md text-center mb-8 focus:outline-none hover:border-gray-400/20 border border-transparent focus:border-gray-400 transition-colors duration-300"
+            className="w-50 2k:w-50 4k:w-100 px-1 py-2.5 2k:py-4 4k:py-6 2k:text-xl 4k:text-3xl bg-dark bg-opacity-40 rounded-md text-center mb-8 focus:outline-none hover:border-gray-400/20 border border-transparent focus:border-gray-400 transition-colors duration-300"
             type="number"
             defaultValue={itemAmount}
             onChange={inputHandler}

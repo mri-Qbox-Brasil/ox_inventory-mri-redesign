@@ -208,7 +208,7 @@ const InventorySlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotProps> =
                     item.name == 'money' ? 'inventory-weight--money' : 'inventory-weight--amount'
                   }`}
                 >
-                  {item.count.toLocaleString('en-us') + ` ${item.name == 'money' ? '$' : 'x'}`}
+                  {item.count.toLocaleString('en-us') + ` ${item.name == 'money' ? 'R$' : 'x'}`}
                 </span>
               )}
             </div>

@@ -32,6 +32,7 @@ body {
 
 #root {
   @apply h-full;
+  --primaryColor: 22, 163, 74; /* Define como RGB */
 }
 
 code {
@@ -340,6 +341,11 @@ button:active {
     // @apply $primaryColor;
     background-color: $primaryColor;
   }
+}
+
+.inventory-background {
+  @apply absolute h-screen w-full top-0 left-0;
+  background: linear-gradient(to left, rgba(var(--primaryColor), 1), rgba(0, 0, 0, 0.3));
 }
 
 .item-slot-wrapper {
